@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B751665-D3BF-45EF-9F19-5E5B612D14FA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Loqui</RootNamespace>
+    <AssemblyName>Loqui</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>loquiLogo_128x128.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\addUser\AddFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\addUser\AddFriend.Designer.cs">
+      <DependentUpon>AddFriend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\dataHandling\DataHandling.cs" />
+    <Compile Include="src\dataHandling\uploadData.cs" />
+    <Compile Include="src\design\Animate.cs" />
+    <Compile Include="src\design\Design.cs" />
+    <Compile Include="src\encrypt\Encryption.cs" />
+    <Compile Include="src\login\createAcc\CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\login\createAcc\CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\login\forgotPass\ForgotPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\login\forgotPass\ForgotPass.Designer.cs">
+      <DependentUpon>ForgotPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\login\Loginv2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\login\Loginv2.Designer.cs">
+      <DependentUpon>Loginv2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\menu\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\menu\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\notifications\Notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\notifications\Notifications.Designer.cs">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\settings\ProgramSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\settings\ProgramSettings.Designer.cs">
+      <DependentUpon>ProgramSettings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="src\addUser\AddFriend.resx">
+      <DependentUpon>AddFriend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\login\createAcc\CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\login\forgotPass\ForgotPass.resx">
+      <DependentUpon>ForgotPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="src\login\Loginv2.resx">
+      <DependentUpon>Loginv2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\menu\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\notifications\Notifications.resx">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\settings\ProgramSettings.resx">
+      <DependentUpon>ProgramSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\black_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\white_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\icons\settingsIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\icons\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources\icons\addFriend.png" />
+    <None Include="bin\Debug\resources\icons\addFriend_White.png" />
+    <None Include="bin\Debug\resources\icons\user_notif.png" />
+    <None Include="bin\Debug\resources\icons\user_notif_White.png" />
+    <None Include="bin\Debug\resources\icons\user_White.png" />
+    <Content Include="loquiLogo_128x128.ico" />
+    <None Include="Resources\loquiLogo_128x128.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
